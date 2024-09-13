@@ -15,15 +15,17 @@ public:
         ListNode* lastNode = output;
         int carry = 0;
         while (l1 || l2) {
-            if (l1 && l2) {
-                lastNode->val = l1->val + l2->val + carry;
-            } else if (l1) {
-                lastNode->val = l1->val + carry;
-            } else if (l2) {
-                lastNode->val = l2->val + carry;
+            if (l1) {
+                lastNode -> val += l1->val;
             }
+            if (l2) {
+                lastNode -> val += l2->val;
+            }
+            lastNode -> val += carry; 
             carry = lastNode->val / 10;
             lastNode->val = lastNode->val % 10;
+
+            // If either node has a node that follows it
             if (l1 && l1->next || l2 && l2->next) {
                 ListNode* newNode = new ListNode();
                 lastNode->next = newNode;
@@ -36,6 +38,7 @@ public:
                 l2 = l2->next;
             }
         }
+        // Overflow
         if (carry > 0) {
             ListNode* newNode = new ListNode(carry);
             lastNode->next = newNode;
