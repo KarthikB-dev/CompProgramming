@@ -13,7 +13,7 @@ class Solution:
             length += 1
         return length 
 
-    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]: # type: ignore
         curr_node = head
         curr_idx = 0
 
