@@ -32,7 +32,7 @@ class Solution:
                 return True
         return False
 
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]: # type: ignore
         row = 0
         col = 0
         num_rows = len(matrix)
