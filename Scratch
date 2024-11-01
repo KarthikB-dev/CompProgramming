@@ -1,0 +1,29 @@
+# class GraphNode:
+#     # Neighbors: dictionary where the key is a GraphNode and the value is the weight
+#     # of the connection
+#     def __init__(self, neighbors={}):
+#         self.neighbors = neighbors
+
+#    def getGraph(self, root, is_root) -> dict:
+#        graph = {}
+#
+#        if root.val not in graph:
+#            graph[root.val] = {}
+#
+#        if root.left != None:
+#            graph[root.val][root.left.val] = root.left.val
+#        if root.right != None:
+#            graph[root.val][root.right.val] = root.right.val
+#
+#        # Add the root's weight
+#        if is_root:
+# Construct an undirected graph where the binary tree nodes are vertices
+# and flip the edge weights
+# graph = {}
+
+
+# For all (u, v), find the path length from u to v (equivalent to the path from v to u) of shortest length
+# using dfs
+
+# Of these, find the longest path
+# So total runtime is O(v^2 * v * e)
