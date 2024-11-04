@@ -1,4 +1,5 @@
 from heapq import heapify, heappop, heappush
+from typing import List
 INF = 1e9
 
 class Solution:
